@@ -122,6 +122,8 @@ p {
 }
 
 
+
+
 .site-nav .item:not(:last-child) {
     margin-right: 50px;
 }
@@ -139,15 +141,26 @@ p {
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;
-
-
 }
+
+
+
+.item-envelope {
+    fill: var(--primary-text-color);
+    width: 16px;
+    height: 12px;
+}
+
+
 
 .site-nav .link:hover,
 .site-nav .link:focus,
 .site-contacts .link:hover,
-.site-contacts .link:focus {
+.site-contacts .link:focus,
+.item-envelope:hover,
+.item-envelope:focus {
     color: var(--accent-color);
+    fill: var(--accent-color);
 }
 
 .site-nav .current {
@@ -162,12 +175,25 @@ p {
 }
 
 /* hero */
-.hero {
+.hero {  
+}
+.overlay {
     background-color: var(--secondary-bg-text);
+    background-image:linear-gradient(to right,
+    rgba(47, 48, 58, 0.4),
+    rgba(47, 48, 58, 0.4)),
+    url(../images/backgound.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    max-width: 1600px;
+    min-height: 600px;
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
     padding-bottom: 200px;
     padding-top: 200px;
-
 }
 
 .hero-title {
@@ -244,6 +270,7 @@ p {
     line-height: 1.14;
     text-transform: uppercase;
 
+    margin-top: 30px;
     margin-bottom: 10px;
 
 }
@@ -254,8 +281,49 @@ p {
 
 .section-strengths .text {
     width: 270px;
-
 }
+
+.antenna {
+    background-color: var(--accent-bg-color);
+    height: 120px;
+    width: 270px;
+    justify-content: center;
+}
+
+.icon-antenna {
+  
+  display: block;
+  margin: auto;
+   
+}
+
+
+/* .text::before {
+    display:block;
+    content: "";
+    height: 120px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: var(--accent-bg-color);
+    border-radius: 4px;} */
+
+
+/* .section-strengths > .icon-antenna::before {
+    background-image: url(../images/antenna.svg);
+}
+
+.section-strengths > .icon-clock::before {
+    background-image: url(../images/clock.svg);
+}
+
+.section-strengths > .icon-diagram::before {
+    background-image: url(../images/diagram.svg);
+}
+
+.section-strengths > .icon-austronaut::before {
+    background-image: url(../images/astronaut.svg);
+} */
 
 
 /* Portfolio main */
@@ -309,9 +377,10 @@ p {
 .section-team .member {
     background-color: var(--secondary-text-color);
     border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
-.team .text {
+.member > .team-text {
     margin-top: 30px;
     margin-bottom: 30px;
 }
@@ -370,7 +439,7 @@ p {
     margin-top: 20px;
 }
 
-.address .text {
+.address .text-address {
     color: var(--secondary-text-color);
     font-style: normal;
     line-height: 1.71;
