@@ -13,6 +13,7 @@
     --secondary-bg-text: #2F303A;
     --border-color: #EEEEEE;
     --border-color-line: #ECECEC;
+    --color-social-network: #AFB1B8;
 }
 
 body {
@@ -145,21 +146,28 @@ p {
 
 
 
-.item-envelope {
+.item-envelope,
+.item-smartphone {
     fill: var(--primary-text-color);
     width: 16px;
     height: 12px;
 }
 
 
-
-.site-nav .link:hover,
-.site-nav .link:focus,
-.site-contacts .link:hover,
-.site-contacts .link:focus,
-.item-envelope:hover,
-.item-envelope:focus {
+.item .link-mail:hover,
+.item .link-mail:focus,
+.item .link-phone:hover,
+.item .link-phone:focus
+ {
     color: var(--accent-color);
+}
+
+.link-mail:hover  .item-envelope,
+.link-mail:focus  .item-envelope,
+.link-phone:hover .item-smartphone,
+.link-phone:focus .item-smartphone 
+
+ {
     fill: var(--accent-color);
 }
 
@@ -167,14 +175,15 @@ p {
     color: var(--accent-color);
 }
 
-.site-contacts .link {
+.site-contacts .link-mail,
+.site-contacts .link-phone {
     color: var(--primary-text-color);
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;
 }
 
-/* hero */
+/* Герой */
 .hero {  
 }
 .overlay {
@@ -229,8 +238,7 @@ p {
 
 /* section */
 
-
-
+/* Сильные стороны */
 
 .container {
     width: 1200px;
@@ -260,7 +268,7 @@ p {
     font-size: 14px;
     line-height: 1.71;
     color: var(--primary-text-color);
-    /* margin-bottom: 94px; */
+
 }
 
 .section-skills .strengths {
@@ -283,47 +291,28 @@ p {
     width: 270px;
 }
 
-.antenna {
+/* svg диаграммы */
+
+.antenna,
+.clock,
+.diagram,
+.austronaut
+ {
     background-color: var(--accent-bg-color);
-    height: 120px;
+    height: auto;
     width: 270px;
-    justify-content: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
 }
 
-.icon-antenna {
-  
+.icon-antenna,
+.icon-clock,
+.icon-diagram,
+.icon-austronaut
+ {
   display: block;
   margin: auto;
-   
 }
-
-
-/* .text::before {
-    display:block;
-    content: "";
-    height: 120px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: var(--accent-bg-color);
-    border-radius: 4px;} */
-
-
-/* .section-strengths > .icon-antenna::before {
-    background-image: url(../images/antenna.svg);
-}
-
-.section-strengths > .icon-clock::before {
-    background-image: url(../images/clock.svg);
-}
-
-.section-strengths > .icon-diagram::before {
-    background-image: url(../images/diagram.svg);
-}
-
-.section-strengths > .icon-austronaut::before {
-    background-image: url(../images/astronaut.svg);
-} */
 
 
 /* Portfolio main */
@@ -361,7 +350,6 @@ p {
 
 .section-team .section-title {
     margin-bottom: 50px;
-
 }
 
 .section-team .team {
@@ -409,6 +397,101 @@ p {
 
 .section-team .name {
     margin-bottom: 10px;
+}
+
+/* Социальные сети */
+
+.network {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 16px;
+}
+
+.social-network {
+    display: block;
+    padding: 12px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+}
+
+.social-network:hover {
+    background-color: var(--accent-color);
+}
+
+.icon-soc-net
+ {
+     fill: var(--color-social-network);
+    width: 20px;
+    height: 20px;
+}
+
+.network .social-network + .social-network {
+    margin-left: 10px;
+}
+
+
+.icon-soc-net:focus,
+.icon-soc-net:hover {
+    fill: var(--secondary-text-color);
+    background-color: var(--accent-color);
+}
+
+/* Постоянные клиенты */
+
+.section-our-clients {
+    margin-bottom: 50px;
+
+    color: var(--title-text-color);
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+}
+
+.clients-company {
+    display: block;
+    padding-top: 16px;
+    padding-left: 32px;
+
+    width: 170px;
+    height: 92px;
+
+    border: 1px solid var(--color-social-network);
+    border-radius: 4px;
+}
+
+
+
+/* Ссылки на компании */
+
+.clients {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.clients-company:hover,
+.clients-company:focus {
+    border-color: var(--accent-color);
+}
+
+.clients-list + .clients-list {
+    margin-left: 30px;
+}
+
+.icon-company {
+    width: 106px;
+    height: 60px;
+
+    fill: var(--color-social-network); 
+}
+
+
+.clients-company:hover > .icon-company,
+.clients-company:focus > .icon-company {
+    fill: var(--accent-color);
 }
 
 /* Footer */
