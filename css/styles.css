@@ -14,6 +14,7 @@
     --border-color: #EEEEEE;
     --border-color-line: #ECECEC;
     --color-social-network: #AFB1B8;
+    --bg-icon: rgba(255, 255, 255, 0.1);
 }
 
 body {
@@ -64,7 +65,6 @@ p {
     padding-bottom: 94px;
 }
 
-
 /* Header */
 
 .header {
@@ -85,8 +85,6 @@ p {
 
 }
 
-
-
 /* logo */
 
 .logo {
@@ -97,7 +95,6 @@ p {
     font-weight: 700;
     font-size: 26px;
     line-height: 1.2;
-
 }
 
 
@@ -122,9 +119,6 @@ p {
     margin-left: auto;
 }
 
-
-
-
 .site-nav .item:not(:last-child) {
     margin-right: 50px;
 }
@@ -144,8 +138,6 @@ p {
     letter-spacing: 0.02em;
 }
 
-
-
 .item-envelope,
 .item-smartphone {
     fill: var(--primary-text-color);
@@ -157,17 +149,14 @@ p {
 .item .link-mail:hover,
 .item .link-mail:focus,
 .item .link-phone:hover,
-.item .link-phone:focus
- {
+.item .link-phone:focus {
     color: var(--accent-color);
 }
 
 .link-mail:hover  .item-envelope,
 .link-mail:focus  .item-envelope,
 .link-phone:hover .item-smartphone,
-.link-phone:focus .item-smartphone 
-
- {
+.link-phone:focus .item-smartphone {
     fill: var(--accent-color);
 }
 
@@ -184,8 +173,7 @@ p {
 }
 
 /* Герой */
-.hero {  
-}
+
 .overlay {
     background-color: var(--secondary-bg-text);
     background-image:linear-gradient(to right,
@@ -268,7 +256,6 @@ p {
     font-size: 14px;
     line-height: 1.71;
     color: var(--primary-text-color);
-
 }
 
 .section-skills .strengths {
@@ -280,7 +267,6 @@ p {
 
     margin-top: 30px;
     margin-bottom: 10px;
-
 }
 
 .section-strengths .text+.text {
@@ -314,7 +300,6 @@ p {
   margin: auto;
 }
 
-
 /* Portfolio main */
 
 .section-portfolio {
@@ -330,7 +315,6 @@ p {
     margin-left: 30px;
 }
 
-
 .section-portfolio .section-title {
     margin-bottom: 50px;
 }
@@ -345,7 +329,6 @@ p {
 
 .section-team {
     background-color: var(--accent-bg-color);
-
 }
 
 .section-team .section-title {
@@ -373,7 +356,6 @@ p {
     margin-bottom: 30px;
 }
 
-
 .section-team .name {
     color: var(--title-text-color);
     font-weight: 500;
@@ -383,8 +365,6 @@ p {
 }
 
 .section-team .profession {
-
-
     color: var(--primary-text-color);
     font-size: 16px;
     line-height: 1.19;
@@ -432,7 +412,6 @@ p {
     margin-left: 10px;
 }
 
-
 .social-network:focus .icon-soc-net,
 .social-network:hover .icon-soc-net {
     fill: var(--secondary-text-color);
@@ -463,8 +442,6 @@ p {
     border-radius: 4px;
 }
 
-
-
 /* Ссылки на компании */
 
 .clients {
@@ -488,7 +465,6 @@ p {
 
     fill: var(--color-social-network); 
 }
-
 
 .clients-company:hover > .icon-company,
 .clients-company:focus > .icon-company {
@@ -518,7 +494,6 @@ p {
     font-size: 26px;
     line-height: 1.2;
 }
-
 
 /* Address */
 
@@ -573,7 +548,7 @@ p {
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: var(--bg-icon);
 }
 
 .footer-social-network:hover,
@@ -592,18 +567,23 @@ p {
     margin-left: 10px;
 }
 
-
 .footer-social-network:focus .footer-icon-soc-net,
 .footer-social-netfooter-work:hover .footer-icon-soc-net {
     fill: var(--secondary-text-color);
     background-color: var(--accent-color);
 }
 
-
 /* Filter */
 
 .filter {
     margin-bottom: 50px;
+}
+
+.container .filter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
 
 .filter-button {
@@ -626,13 +606,6 @@ p {
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-.container .filter {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-}
-
 .filter .item+.item {
     margin-left: 9px;
 }
@@ -642,10 +615,6 @@ p {
 .portfolio {
     display: flex;
     flex-wrap: wrap;
-}
-
-.portfolio-list .img {
-    display: flex;
 }
 
 .portfolio-list {
@@ -679,7 +648,9 @@ p {
     border-top: none;
 }
 
-
+.portfolio-list .img {
+    display: flex;
+}
 
 .portfolio .title {
     margin-bottom: 4px;
@@ -693,7 +664,6 @@ p {
 }
 
 .portfolio .text {
-
     color: var(--primary-text-color);
     font-size: 16px;
     line-height: 1.88;
